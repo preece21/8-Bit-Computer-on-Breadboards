@@ -1,0 +1,19 @@
+// Fibonacci Squence Program
+// Outputs the fibonacci sequence up to 233 and then loops back to the beginning
+// Format: Address(Hex): Opcode(Binary) // Opcode(Hex) // Assembler Mnemonic
+
+0x00 : 00001111 // 0x0f // DATA Rb, #Imme
+0x01 : 00000000 // 0x00 // #0
+0x02 : 00010111 // 0x17 // DATA Rc, #Imme
+0x03 : 00000001 // 0x01 // #1
+0x04 : 01111001 // 0x79 // OUT Rb
+0x05 : 01111010 // 0x7a // OUT Rc
+0x06 : 00000010 // 0x02 // MOV Ra, Rc
+0x07 : 11000001 // 0xc1 // 0xADD Rb
+0x08 : 00111000 // 0x38 // JC #Imme
+0x09 : 00000000 // 0x00 // RESET
+0x0a : 00001010 // 0x0a // MOV Rb, Rc
+0x0b : 00010000 // 0x10 // MOV Rc, Ra
+0x0c : 01111000 // 0x78 // OUT Ra
+0x0d : 00101111 // 0x2f // JMP #Imme
+0x0e : 00000110 // 0x06 // LOOP
